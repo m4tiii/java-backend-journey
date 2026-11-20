@@ -2,10 +2,7 @@ package pl.rokitowski.fundamentals.comparable_and_comparator;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 public class Main {
 
@@ -30,5 +27,23 @@ public class Main {
         IO.println(events);
         events.sort(Event.BY_PRICE_DESCENDING);
         IO.println(events);
+
+        Comparator<Integer> zly = Integer::compareTo;
+
+        Random r = new Random();
+        for (int proba = 1; proba <= 100; proba++) {
+            List<Integer> lista = new ArrayList<>();
+            for (int i = 0; i < 1000; i++) {
+                lista.add(r.nextInt(10));        // dużo powtórzeń: 0–9
+            }
+            try {
+                lista.sort(zly);
+            } catch (IllegalArgumentException e) {
+                IO.println("Próba " + proba + ": " + e.getMessage());
+                return;
+            }
+        }
+        IO.println("Nie wysypało się w 100 próbach");
+
     }
 }
