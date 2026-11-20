@@ -1,4 +1,4 @@
-package pl.rokitowski.fundamentals;
+package pl.rokitowski.fundamentals.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

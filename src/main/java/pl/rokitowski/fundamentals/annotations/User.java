@@ -1,4 +1,4 @@
-package pl.rokitowski.fundamentals;
+package pl.rokitowski.fundamentals.annotations;
 
 public class User {
     @NotBlankField
