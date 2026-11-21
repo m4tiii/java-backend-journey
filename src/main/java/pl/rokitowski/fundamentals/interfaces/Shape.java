@@ -11,6 +11,7 @@ sealed public interface Shape permits Circle, Rectangle, Trinagle{
         return switch (s){
             case Circle c -> "Circle r=" + c.radius();
             case Rectangle r -> "Rectangle " + r.width() + "x" + r.height();
+            case Trinagle t -> "Triangle";
         };
     }
 }
