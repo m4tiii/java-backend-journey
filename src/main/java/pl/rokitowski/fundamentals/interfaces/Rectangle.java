@@ -1,17 +1,8 @@
 package pl.rokitowski.fundamentals.interfaces;
 
-public class Rectangle implements Shape{
-
-    double a;
-    double b;
-
-    public Rectangle(double a, double b){
-        this.a = a;
-        this.b = b;
-    }
-
+public record Rectangle(double width, double height) implements Shape{
     @Override
     public double area() {
-        return a*b;
+        return width*height;
     }
 }
