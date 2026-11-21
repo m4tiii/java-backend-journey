@@ -17,5 +17,8 @@ public class Main {
             total += s.area();
         }
         IO.println(total);
+
+        IO.println(circle.describe());
+        IO.println(rectangle.describe());
     }
 }
