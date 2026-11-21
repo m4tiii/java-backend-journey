@@ -21,10 +21,20 @@ public class Main {
         long start = System.nanoTime();
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < 100000; i++) {
-            //stringBuilder.append("x");
+            stringBuilder.append("x");
         }
         long ms = (System.nanoTime() - start) / 1_000_000;
 
         IO.println(ms);
+
+        String a = "java";
+        String b = "java";
+        String c = new String("java");
+        String d = c.intern();
+
+        IO.println(a == b);
+        IO.println(a == c);
+        IO.println(a.equals(c));
+        IO.println(a == d);
     }
 }
